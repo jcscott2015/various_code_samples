@@ -1,0 +1,60 @@
+/* LESS for the contact page, GRN Advantage Marketing site
+   Created by: John C. Scott, Scott Communications
+               http://www.scottcomm.com/
+   Created: 1/12/08
+   Modified: 1/21/08
+*/
+
+$white: #fff;
+$light-yellow: #ffc;
+$light-blue: #809db9;
+$medium-blue: #4e6c99;
+#header {
+    background-image: url("../images/contact_top.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+#footer {
+    background-image: url("../images/footer_02.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+form {
+    fieldset {
+        clear: none;
+        background-color: $light-yellow;
+        border: 1px solid $medium-blue;
+        padding: 15px;
+        margin: 0;
+    }
+    div {
+        clear: both;
+        /* for IE */
+        height: 1%;
+        label {
+            display: block;
+            float: left;
+            width: 75px;
+            padding: 0;
+            margin: 0 10px 5px 10px;
+            text-align: left;
+        }
+        &.required,
+        &.optional {
+            input {
+                @extend label;
+                width: 145px;
+                background-color: $white;
+                border: 1px solid $light-blue;
+            }
+        }
+        &.submit {
+            width: 100%;
+            margin: 0 auto;
+            padding: 2px 0 0 0;
+            text-align: center;
+        }
+    }
+}

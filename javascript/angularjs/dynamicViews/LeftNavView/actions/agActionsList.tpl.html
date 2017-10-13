@@ -1,0 +1,15 @@
+<div class="col-xs-3">
+    <h2>This is the Actions List Directive</h2>
+    <!--{{vm.viewResource}}-->
+    <div ng-repeat="navItem in vm.nav.actions"
+         id="nav-item-{{navItem.id}}"
+         class="nav-item-type-{{navItem.type}}"
+         ng-class="{'active':navItem.active}"
+         ng-click="vm.viewNavItem(navItem)">{{'app.navs.' + navItem.name | translate}}
+</div>
+
+<div class="col-xs-9">
+    <loading-directive loading="vm.navList.loadingNav"></loading-directive>
+    <ag-dynamic-view ng-hide="vm.navList.loadingNav" view="vm.nav.view"></ag-dynamic-view>
+</div>
+{{vm.view}}
